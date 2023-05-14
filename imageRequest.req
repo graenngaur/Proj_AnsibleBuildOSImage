@@ -1,0 +1,14 @@
+{
+"image_name": "TEST_IMAGE_ANSIBEL_v7",
+"distribution": "rhel-92",
+"image_requests": [
+{
+"architecture": "x86_64",
+"image_type": "vsphere",
+"upload_request": {
+"type": "aws.s3",
+"options": {}
+}
+}
+]
+}
