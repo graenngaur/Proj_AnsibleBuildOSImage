@@ -1,5 +1,5 @@
 ---
-- name: create a new image
+- name: Creatie van een nieuw RHEL OS image
   hosts: "{{ BUILDSERVER }}" 
   become: no
   gather_facts: false
@@ -79,5 +79,5 @@
     register: results_download
 
   - debug:
-      msg: "Download van de OS image uitgevoerd -> /tmp"
-    when: results_download|success
+      msg: "Download van de OS image uitgevoerd -> {{ results_download.dest }}"
+    when: results_download.state == 'success'
