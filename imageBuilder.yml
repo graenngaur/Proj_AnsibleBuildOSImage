@@ -77,7 +77,7 @@
       owner: root
       group: root
     register: results_download
- 
-   - debug:
-       msg: "Download van de OS image uitgevoerd -> /tmp"
-     when: results_download|success
+
+  - debug:
+      msg: "Download van de OS image uitgevoerd -> /tmp"
+    when: results_download|success
