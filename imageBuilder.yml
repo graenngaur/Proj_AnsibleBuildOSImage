@@ -76,5 +76,8 @@
       dest: /tmp
       owner: root
       group: root
-      status_code: 200
     register: results_download
+ 
+   - debug:
+       msg: "Download van de OS image uitgevoerd -> /tmp"
+     when: results_download|success
