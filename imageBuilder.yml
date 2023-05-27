@@ -29,9 +29,9 @@
       timeout: 30
     register: results
     
-  - name: print de uitkomst van POST request
-    debug:
-      var: results
+  #- name: print de uitkomst van POST request
+  #  debug:
+   #   var: results
       
   - set_fact:
       "ACCESS_TOKEN": "{{ results.json | json_query('access_token') }}"
@@ -63,9 +63,9 @@
     delay: 60
     ignore_errors: yes
 
-  - name: print de uitkomst van build request
-    debug:
-      var: results
+ # - name: print de uitkomst van build request
+ #   debug:
+  #    var: results
 
   - set_fact:
       "IMAGE_URL": "{{ results.json.image_status.upload_status.options | json_query('url') }}"
