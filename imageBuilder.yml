@@ -1,6 +1,6 @@
 ---
 - name: create a new image
-  hosts: localhost 
+  hosts: "{{ BUILDSERVER }}" 
   become: no
   gather_facts: false
 
