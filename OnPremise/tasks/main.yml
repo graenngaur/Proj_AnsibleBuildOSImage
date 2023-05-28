@@ -1,7 +1,7 @@
 ---
 - name: Creatie van OSimage on premise
-  #hosts: "{{ BUILDSERVER }}"
-  hosts: "rhel8imagebuilder.theesway.org"
+  hosts: "{{ BUILDSERVER }}"
+  #hosts: "rhel8imagebuilder.theesway.org"
   become: false
   gather_facts: false
 
